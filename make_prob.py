@@ -5,7 +5,7 @@ import subprocess
 import shutil
 
 # set up this in order to point to proper directory.
-setup_dir = "/Users/junikim/Desktop/setup"
+setup_dir = "/Users/junikim/cp"
 os.environ["CP_SETUP_DIR"] = setup_dir
 
 parser = argparse.ArgumentParser()
@@ -29,6 +29,7 @@ create a new script in prob_maker, and then call as below.
 
 file_option("-py")
 file_option("-std")
+file_option("-selfio")
 file_option("-java")
 file_option("-minjava")
 file_option("-rust")
@@ -49,6 +50,10 @@ for file in problems.minjava:
 
 for file in problems.py:
     subprocess.call(["bash", setup_dir +"/prob_maker/py.sh", file])
+    add_download()
+
+for file in problems.selfio:
+    subprocess.call(["bash", setup_dir + "/prob_maker/selfio.sh", file])
     add_download()
 
 for file in problems.rust:
