@@ -5,7 +5,7 @@ import subprocess
 import shutil
 
 # set up this in order to point to proper directory.
-setup_dir = "/Users/junikim/cp"
+setup_dir = os.path.realpath(os.path.dirname(__file__))
 os.environ["CP_SETUP_DIR"] = setup_dir
 
 parser = argparse.ArgumentParser()

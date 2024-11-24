@@ -1,4 +1,4 @@
-CXX=g++-11
+CXX=g++-14
 CXXFLAGS=-std=c++11 -Wall -Wextra -pedantic -fsanitize=address -fsanitize=undefined -D_GLIBCXX_DEBUG
 FFLAGS=-std=c++11 -O2 -Wall -Wextra # for fast flags
 PROG=PROB_NAME
